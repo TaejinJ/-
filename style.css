@@ -1,0 +1,81 @@
+body{
+    margin: 0px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+    
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(157, 155, 155);
+}
+.navbar_logo{
+    font-size: 24px;
+    color: rgb(218, 219, 238);
+}
+.navbar_logo i {
+    color: rgb(244, 250, 246);
+}
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    padding: 8px;
+}
+
+.navbar_menu li{
+    padding: 8px 12px;
+}
+.navbar_menu li:hover{
+background-color: rgb(245, 245, 178);
+border-radius: 4px;
+}
+.navbar_icons{    
+    color: rgb(209, 202, 202);
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    
+}
+
+.navbar_icons li{
+    padding: 4px 8px;
+}
+.navbar_togglebtn{
+    position: absolute;
+    right: 32px;
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+    
+    .navbar_menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;       
+        display: none;
+    }
+  .navbar_icons{
+      display: none;
+      justify-content: center;
+      width: 100%;
+      
+  }
+    .navbar_togglebtn{
+        display: block;
+    }
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
+}
